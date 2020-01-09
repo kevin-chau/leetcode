@@ -1,0 +1,30 @@
+// Naive solution, uses indexes into string
+// Assumes only letters in input string
+class Solution {
+public:
+    string toLowerCase(string str) {
+        // Naive - replace ascii characters with lowercase counterpart
+        for (int i = 0; i < str.length(); i++)
+        {
+            if (str[i] >= 65 && str[i] <= 96)
+            {
+                str[i] = str[i] + 32;
+            }
+        }
+        
+        return str;
+    }
+};
+
+
+class Solution {
+public:
+    string toLowerCase(string str) {
+        // Uses reference to characters
+        for (char& c : str)
+        {
+            if (c >= 'A' && c <= 'Z') c += 32;
+        }
+        return str;
+    }
+};

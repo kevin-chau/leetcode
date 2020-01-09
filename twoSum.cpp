@@ -81,7 +81,7 @@ public:
         {
             int complement = target - nums[i];
             auto found = hash.find(complement);
-            if (found != hash.end() && found->second != i)
+            if (found != hash.end())
             {
                 vector<int> solution{i, hash[target - nums[i]]};
                 return solution;
